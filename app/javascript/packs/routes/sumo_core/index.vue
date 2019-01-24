@@ -3,15 +3,15 @@
     <h1>SUMO CORE</h1>
     <div class="wrapper">
       <div class="item">
-        <img class="item-image" src="assets/account_billing.png" />
+        <img class="item-image" src="assets/features.png" />
         <p class="item-title"><router-link :to="{ name: link, params: {} }">Sumo Basics (I)</router-link></p>
       </div>
       <div class="item">
-        <img class="item-image" src="assets/account_billing.png" />
+        <img class="item-image" src="assets/getting_started.png" />
         <p class="item-title"><router-link :to="{ name: link2, params: {} }">Troubleshooting Fundamentals (II)</router-link></p>
       </div>
       <div class="item">
-        <img class="item-image" src="assets/account_billing.png" />
+        <img class="item-image" src="assets/blog.png" />
         <p class="item-title"><router-link :to="{ name: link3, params: {} }">Advanced Concepts (III)</router-link></p>
       </div>
       <div class="item">
@@ -63,7 +63,7 @@ h1 {
 }
 
 .item {
-  height: 180px;
+  height: 200px;
   width: 200px;
   /* border: 1px solid black; */
   color: #7A7A7A;
@@ -77,7 +77,8 @@ h1 {
 
 .item-title {
   position: relative;
-  /* bottom: 2px; */
+  vertical-align: middle;
+  top: 10px;
 }
 
 .item-image {

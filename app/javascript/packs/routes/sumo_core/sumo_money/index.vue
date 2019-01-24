@@ -72,8 +72,12 @@ h1 {
 }
 
 .item-title {
+  text-align: center;
   position: relative;
-  /* bottom: 2px; */
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .item-image {
