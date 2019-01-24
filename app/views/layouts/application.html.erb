@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sumo Agent Training Program</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%# javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= stylesheet_pack_tag 'application' %>
+    <%= javascript_pack_tag 'application' %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <!-- Required Stylesheets -->
+    <!-- <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css"/> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <style>
+      html,
+      body,
+      #vue-app {
+        height: 100%;
+        width: 100%;
+      }
+
+      #vue-app {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-align: center;
+      }
+
+      body {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #f5f5f5;
+      }
+
+      .form-signin {
+        width: 100%;
+        max-width: 330px;
+        padding: 15px;
+        margin: auto;
+      }
+      .form-signin .checkbox {
+        font-weight: 400;
+      }
+      .form-signin .form-control {
+        position: relative;
+        box-sizing: border-box;
+        height: auto;
+        padding: 10px;
+        font-size: 16px;
+      }
+      .form-signin .form-control:focus {
+        z-index: 2;
+      }
+      .form-signin input[type="email"] {
+        margin-bottom: -1px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+      .form-signin input[type="password"] {
+        margin-bottom: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+
+      .topnav {
+        background-color: #073A5A;
+        overflow: hidden;
+      }
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .topnav {
+        top: 0px;
+        position: absolute;
+        width: 100%;
+        height: 60px;
+      }
+
+      .topnav ul li {
+        float: right;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+
+      .topnav ul li a {
+        color: white;
+        font-size: 14px;
+        font-weight: normal;
+        font-family: Arial, sans-serif;
+        /* text-decoration: none; */
+      }
+
+      .logo {
+        float: left;
+        max-height: 30px;
+        max-width: 100%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left: 15px;
+      }
+
+      footer {
+        padding-top:12px;
+        color: #7A7A7A;
+        border-top: 1px solid #ccc;
+        bottom: 0px;
+        position: absolute;
+        width: 100%;
+        height: 40px;
+        font-size: 10px;
+        border-top: 1px solid #ccc;
+      }
+
+      /* .topnav ul li a:hover {
+        background-color: #555;
+        color: white;
+      } */
+    </style>
+  </head>
+
+  <body class="text-center">
+    <div id='vue-app'>
+      <div class="topnav" v-if="this.$store.state.loggedIn == true ">
+        <img class="logo" src="assets/sumo-logo.png" />
+        <ul>
+          <li><router-link :to="{ name: 'sumo_core.index', params: { }}">Home</router-link></li>
+          <li><router-link :to="{ name: 'sumo_core.index', params: { }}">Exams</router-link></li>
+          <li><router-link :to="{ name: 'sumo_core.index', params: { }}">Progress</router-link></li>
+          <li><router-link :to="{ name: 'sumo_supplements.index', params: { }}">Supplements</router-link></li>
+          <li><router-link :to="{ name: 'sumo_core.index', params: { }}">Sumo Core</router-link></li>
+        </ul>
+      </div>
+      <form class="form-signin" v-if="this.$store.state.loggedIn == false">
+        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <div class="checkbox mb-3">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+      <router-view></router-view>
+    </div>
+    <footer>
+      <p>SUMO GROUP &copy; 2018</p>
+    </footer>
+  </body>
+</html>
