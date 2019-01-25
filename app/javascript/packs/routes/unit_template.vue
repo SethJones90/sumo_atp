@@ -39,26 +39,26 @@
                 <p><a href="https://sumome.zendesk.com/agent/tickets/126051" target="_blank">https://sumome.zendesk.com/agent/tickets/126051</a></p>
               </div>
             </div>
-          </div>
+
 
             <!-- SECTION START -->
             <div class="section">
               <h3>Helpful Links</h3>
 
               <div class="paragraph">
-                <p><a href="" target="_blank"</a></p>
-                <p><a href="" target="_blank"</a></p>
-                <p><a href="" target="_blank"</a></p>
-                <p><a href="" target="_blank"</a></p>
-                <p><a href="" target="_blank"</a></p>
-                <p><a href="" target="_blank"</a></p>
-                <p><a href="" target="_blank"</a></p>
+                <p><a href="" target="_blank"></a></p>
+                <p><a href="" target="_blank"></a></p>
+                <p><a href="" target="_blank"></a></p>
+                <p><a href="" target="_blank"></a></p>
+                <p><a href="" target="_blank"></a></p>
+                <p><a href="" target="_blank"></a></p>
+                <p><a href="" target="_blank"></a></p>
               </div>
             </div>
 
             <!-- SECTION START -->
             <div class="section">
-              <h3>CERTIFICATION EXAM:</h3>
+              <h3>Certification Exam:</h3>
               <div class="paragraph">
                 <p><a href="" target="_blank"</a></p>
               </div>
